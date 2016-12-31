@@ -1,0 +1,104 @@
+//
+//  main.cpp
+//  Bjorn_cpp_learning
+//
+//  Created by Keyanoush Razavi on 24.12.16.
+//  Copyright © 2016 Kanonymous. All rights reserved.
+//
+
+#include <iostream>
+#include <string>
+#include <typeinfo>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+double kmtomi(double x)
+{
+    return 1.609 * x;
+}
+
+void currtransfer(double entry, char curr)
+{
+    if(curr=='e')
+    {
+        cout << entry << " Euros are " << entry*1.4 << " Yen" << endl;
+    }
+    else if(curr=='y')
+    {
+        cout << entry << " Yen are " << entry*10 << " Euros" << endl;
+    }
+    else
+    {
+        cout << "no valid currency or check spelling" << endl;
+    }
+}
+void print_square(int v)
+{
+    cout << v << '\t' << v*v << '\n';
+}
+
+int main(int argc, const char * argv[]) {
+//    vector<double> temps;
+//    for(double temp; cin >> temp; )
+//        temps.push_back(temp);
+//    
+//    double sum = 0;
+//    for (int x:temps) sum += x;
+//    cout << "Average temperature: " << sum/temps.size() << endl;
+//    
+//    sort(temps.begin(), temps.end());
+//    cout << "Median temperature: " << temps[temps.size()/2] << endl;
+//
+    vector<string> dict;
+    vector<string> disliked = {"end", "Hallo", "nein"};
+    int test = 0;
+    for(string word; cin >> word; )
+    {
+        for(int i=0; i < disliked.size(); i++)
+        {
+            if(word == disliked[i]) test = 1;
+        }
+        if(test == 1)
+        {
+            dict.push_back("BEEP");
+            cout << "Word: " << word << " erased" << endl;
+        }
+        else
+            dict.push_back(word);
+        test = 0;
+    }
+    sort(dict.begin(), dict.end());
+    
+    for(int i; i<dict.size(); i++)
+    {
+        if(i==0||dict[i-1]!=dict[i])
+            cout << dict[i] << endl;
+    }
+while(cin >> 
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
